@@ -1,0 +1,302 @@
+@import url(https://fonts.gstatic.com/s/poppins/v22/pxiGyp8kv8JHgFVrLPTufntAKPY.woff2);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: center;
+    background-color: rgb(15, 15, 15);
+}
+nav{
+    background: rgb(22, 22, 22);
+    padding: 1rem;
+    width: 100%;
+    height: 10vh;
+    position: unset;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    display: inline-flex;
+}
+nav ul li a {
+    color: rgb(250, 242, 247);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #050505;
+    border-radius: 5px;
+}
+.nav-container{
+    color: rgb(238, 235, 237);
+    text-shadow: 0  0 10px rgb(10, 10, 10);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: rgb(15, 14, 15);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo span{
+    color: rgb(211, 39, 96);
+    text-shadow: 0 0 10px rgb(245, 239, 239);
+}
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgb(238, 237, 237);
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+.nav-container .links{
+    display: flex;
+    color: rgb(10, 10, 10);
+    text-shadow: 0  0 10px palevioletred;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(241, 236, 236);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+.nav-container .links a::before{
+    color: palevioletred;
+    text-shadow: 0  0 10px palevioletred;
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: palevioletred;
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    color: palevioletred;
+    text-shadow: 0  0 10px rgb(27, 26, 27);
+    width: 100%;
+}
+.nav-container .links a:hover{
+    color: palevioletred;
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px rgb(247, 245, 245);
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    display: flex;
+    color: rgb(228, 59, 152);
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: palevioletred;
+}
+section{
+    color: rgb(236, 90, 127);
+    text-shadow: 0  0 10px rgb(24, 23, 23);
+    width: 100%;
+    height: 90vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image{
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px palevioletred;
+}
+.main-container .image img{
+    width: 100%;
+}
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+@keyframes animate {
+    
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.main-container .content{
+    color: rgb(224, 107, 176);
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    color: palevioletred;
+    text-shadow: 0  0 10px rgb(221, 218, 219);
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+.content h1 span{
+    color: rgb(243, 235, 238);
+    text-shadow: 0  0 10px rgb(250, 249, 249);
+}
+.content .typewriter{
+    color: rgb(245, 240, 242);
+    text-shadow: 0  0 10px rgb(19, 18, 18);
+        font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+.content .typewriter-text{
+    color: rgb(241, 235, 237);
+    text-shadow: 0 0 10px rgb(5, 5, 5);
+}
+.content p{
+    color: palevioletred;
+    text-shadow: 0  0 10px rgb(240, 234, 236);
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-links i{
+    display: inline;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(26, 24, 25);
+    border: 0.2rem solid  palevioletred;
+    border-radius: 50%;
+    color:  rgb(252, 236, 241);
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s cubic-bezier();
+}
+.social-links i:hover{
+    scale: 1.3;
+    color: #eee5ec;
+    background-color:  rgb(14, 13, 13);
+    filter: drop-shadow(0 0 10px #f4f4f4);
+}
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color:  palevioletred;
+    color: rgb(236, 226, 233);
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+    scale: 1.1;
+    color:  rgb(250, 247, 248);
+    border: 2px solid rgb(245, 67, 126);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px  rgb(15, 15, 15);
+}
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+        color: rgb(233, 225, 227);
+        text-shadow: 0  0 10px rgb(17, 16, 16);
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        color: rgb(243, 228, 233);
+        text-shadow: 0  0 10px rgb(8, 8, 8);
+        display: none;
+    }
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container button{
+        margin-top: 15px;
+        color: rgb(238, 231, 233);
+        text-shadow: 0  0 10px rgb(20, 20, 20);
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    padding: 16px 35px;
+    text-decoration: none;
+    border: yellow 1px solid;
+    border-radius: 35px;
+    letter-spacing: 2px;
+     color: #a51464;
+}
+a:hover{
+    background-color: pink;
+
+
+}
+}
